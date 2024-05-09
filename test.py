@@ -1,7 +1,8 @@
 # import sys
 # import pandas as pd
-# s="-0.916380700,4.3526587000,8.3737200000,28119731"
+# s="0.04309243  "
 # print(sys.getsizeof(s))
+# print(float('1.2 '))
 #
 # df = pd.DataFrame({'A':[1,2,3],'B':[4,5,6]})
 # print(df)
@@ -51,5 +52,30 @@ from collections import deque
 # plt.tight_layout()
 # plt.show()
 
-L=[1,2,3,4]
-y=np.array(L[:3])
+# L=[1,2,3,4]
+# y=np.array(L[:3])
+#
+# from datetime import datetime
+# current_time = datetime.now()
+# print("Current time:", current_time)
+# formatted_time = current_time.strftime("%Y%m%d%H%M%S")
+# print("Formatted time:", formatted_time)
+# formatted_time = formatted_time[:-1]
+# print(formatted_time)
+import pandas as pd
+def func1(df: pd.DataFrame,newData:list):
+    ndf = pd.DataFrame([L],columns=df.columns)
+    # print(ndf)
+    df = pd.concat([df,ndf],axis=0,ignore_index=True)
+    return df
+
+df = pd.DataFrame(columns=['x','y','z','time'])
+# print(df)
+df = func1(df,[1,2,3,4])
+df = func1(df,[1,2,3,4])
+df = func1(df,[1,2,3,4])
+df = func1(df,[1,2,3,4])
+df = func1(df,[1,2,3,4])
+# df = pd.([df, pd.Series([1,2,3,4], index=df.columns)], axis=1)
+
+print(df)

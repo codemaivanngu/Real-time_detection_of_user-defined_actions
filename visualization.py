@@ -2,12 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 from collections import deque
-
+mx=100
 # Initialize empty lists to store data
-x_data = deque(maxlen=100)
-y_data = deque(maxlen=100)
-y_data2 = deque(maxlen=100)
-y_data3 = deque(maxlen=100)
+x_data = deque(maxlen=mx)
+y_data = deque(maxlen=mx)
+y_data2 = deque(maxlen=mx)
+y_data3 = deque(maxlen=mx)
 
 x_data.append(0)
 y_data.append(0)
