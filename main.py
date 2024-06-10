@@ -77,7 +77,7 @@ firstTimeRecord=1
 startTimeRecord=0
 maxTimeRecord=30
 
-model = keras.models.load_model("20240509144431model.h5")
+model = keras.models.load_model("20240610183906model.keras")
 
 Q = deque(maxlen=99)
 for i in range(100):Q.append(0)
