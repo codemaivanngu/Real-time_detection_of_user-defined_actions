@@ -19,9 +19,9 @@ import sys
 print("first message: ")
 
 s=conn.recv(1000)#96
+print("finishhhhhhhhhhh")
 
 import visualization
-import recordData
 import numpy as np
 import pickle
 from datetime import datetime
@@ -77,11 +77,13 @@ SS=""
 df = pd.DataFrame(columns=['x','y','z','time'])
 firstTimeRecord=1
 startTimeRecord=0
-maxTimeRecord=30
+maxTimeRecord=100
+
 
 while True:
+    # print("troll")
     s = conn.recv(batchSize).decode("utf-8")
-    # print("s:",s)
+    print("s:",s)
     SS+=s
     if len(SS)>80:
         s=SS[:80]
@@ -99,11 +101,11 @@ while True:
             firstTimeRecord=0
             startTimeRecord=perf_counter()
         elif perf_counter()-startTimeRecord<maxTimeRecord :
-            if perf_counter()-startTimeRecord>5:
+            if perf_counter()-startTimeRecord>3:
                 print("is recording")
                 df= func1(df,L)
         else:
-            df.to_csv(getFormatedTime() + ".csv")
+            df.to_csv(getFormatedTime() +"-"+input()+ ".csv")
             exit(0)
         print(perf_counter()-startTimeRecord)
     #break by irregular received data

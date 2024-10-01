@@ -1,6 +1,8 @@
 keras
 numpy
 pandas
-tensorflow>=2.0
+tensorflow
 scikit-learn
 matplotlib
+requests
+
