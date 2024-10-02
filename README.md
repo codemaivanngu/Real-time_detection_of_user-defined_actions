@@ -33,7 +33,3 @@ To add a new action to the application, follow these steps:
 Once the model is trained, you can:
 
 - **Run the Application**: Execute `./main.py` to start the application. Connect your device and enjoy the action prediction capabilities!
-
----
-
-Feel free to further customize the README with additional details or formatting as needed!
